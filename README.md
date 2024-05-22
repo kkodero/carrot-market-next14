@@ -209,3 +209,23 @@ java script를 이용해 prisma를 통해서 DB를 조회하거나 수정작업�
 Prisma Studio
 Prisma 프로젝트에서 데이터를 탐색하고 조작하는 가장 쉬운 방법입니다.
 npx prisma studio
+
+======================================================================
+8. AUTHENTICATION
+
+8.1 safeParseAsync
+=> database에서 ID또는 email존재 하는지 check
+
+8.2 Hashing
+=>비밀번호 hashing 하기
+'npm i bcrypt
+'npm i @types/bcrypt
+
+8.3 session 관리
+'npm i iron-session
+
+getIronSession 사용하여 쿠키 생성하고
+await cookie.save(); 쿠키 저장
+
+1password password generator
+https://1password.com/password-generator/
