@@ -215,6 +215,7 @@ npx prisma studio
 
 8.1 safeParseAsync
 => database에서 ID또는 email존재 하는지 check
+refine => superRefine 사용
 
 8.2 Hashing
 =>비밀번호 hashing 하기
@@ -229,3 +230,18 @@ await cookie.save(); 쿠키 저장
 
 1password password generator
 https://1password.com/password-generator/
+
+8.4 Middleware
+=> 다른페이지로 redirect
+=> 인증된 page or public page 구분하여 이동
+Matcher
+matcher를 사용하면 Middleware를 필터링하여 
+특정 경로들에서만 실행되도록 할 수 있습니다.
+
+======================================================================
+
+9. 소셜 로그인 연동
+
+9.1 GitHub Authentication
+
+https://github.com/settings/applications/new
