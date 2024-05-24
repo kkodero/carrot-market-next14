@@ -1,4 +1,4 @@
-import { getIronSession } from "iron-session";
+import { getIronSession } from "iron-session"; 
 import { cookies } from "next/headers";
 
 interface SessionContent {
@@ -10,4 +10,10 @@ export default function getSession() {
     cookieName: "delicious-karrot",
     password: process.env.COOKIE_PASSWORD!,
   });
+}
+
+export async function loginWithId(user: { id: number }) {
+  const session = await getSession();
+  session.id = user.id;
+  await session.save();
 }

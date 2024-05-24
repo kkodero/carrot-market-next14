@@ -21,6 +21,8 @@ project 만들기 Y
 typescript 만들기 Y
 ESLINT 만들기 Y
 TAILWIND 만들기 Y
+
+code carrot-market-next14
 ======================================================================
 3.확장 프로그램 설치
 
@@ -245,3 +247,10 @@ matcher를 사용하면 Middleware를 필터링하여
 9.1 GitHub Authentication
 
 https://github.com/settings/applications/new
+
+9.2 Token 관리
+모르겠음
+
+9.3 Twilio 사용하기
+https://www.twilio.com/en-us
+=>google로가입함
