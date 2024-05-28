@@ -16,6 +16,13 @@ https://devgoat.tistory.com/12
 1.2 git 커밋 취소 하기
  git reset --soft HEAD^
 
+
+======================================================================
+#vscode 파일 항상 새창에 열기
+1. Ctrl + Shift + P
+2. "Preferences: Open Setting (UI)" 검색 후 선택
+3. 검색창에 "window.openFilesInNewWindow" 검색
+4. "window.openFilesInNewWindow": "on" 설정 
 ======================================================================
 2.프로젝트 만들기
 
@@ -284,4 +291,12 @@ Redirect URI: http://localhost:3000/api/auth/callback/kakao
 REST API키 가 KAKAO_CLIENT_ID 
 제품설정 > 보안 메뉴에 가면 카카오로그인 ON을 할 수 있는데, 거기에 나오는 코드가 KAKAO_CLIENT_SECRET
 
+10.
+NextJS의 Image는 이미지를 자동으로 최적화를 해 주어 성능을 향상시키고 빠른 로딩이 되도록 해 준다.
+하지만 외부 호스트의 이미지(다른 사이트의 이미지 링크 등)를 불러올 때는 보안 상의 이유로 이 기능이 허용되지 않는다.
+따라서 next.config.mjs에서 hostname들을 등록해 주어야 한다.
+(nextConfig > images > remotePatterns > hostname)
 
+11.
+
+12. MODALS
