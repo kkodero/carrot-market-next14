@@ -297,6 +297,17 @@ NextJS의 Image는 이미지를 자동으로 최적화를 해 주어 성능을 �
 따라서 next.config.mjs에서 hostname들을 등록해 주어야 한다.
 (nextConfig > images > remotePatterns > hostname)
 
-11.
+11. 이미지 업로드
+#Cloudflare Image Optimization
+https://developers.cloudflare.com/images
+비슷한 제품 : AWS S3
+env파일에 accounhtId, accountHash, 토큰 추가
+
+#varints 추가하여 이미지 설정 가능
+/url/[variant]로 이미지 크기및 기타설정 가능
+
+###### REACT HOOK FORM  ######
+https://react-hook-form.com
+'npm i @hookform/resolvers
 
 12. MODALS
