@@ -12,3 +12,8 @@ export function formatToTimeAgo(date: string): string {
   export function formatToWon(price: number): string {
     return price.toLocaleString("ko-KR");
   }
+
+  export function formatToUSD(price: number): string {
+    return price.toLocaleString('en-US');
+  }
+  

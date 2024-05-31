@@ -308,6 +308,15 @@ env파일에 accounhtId, accountHash, 토큰 추가
 
 ###### REACT HOOK FORM  ######
 https://react-hook-form.com
+'npm install react-hook-form
 'npm i @hookform/resolvers
 
 12. MODALS
+
+12.1 Interceptiong
+# URL segment
+ (..)folder/[id]/page.tsx  =>2단계위
+ (.)folder/[id]/page.tsx   =>1단계위
+
+ # Parallel Routes
+https://nextjs.org/docs/app/building-your-application/routing/parallel-routes
