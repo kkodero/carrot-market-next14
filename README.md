@@ -32,8 +32,15 @@ typescript 만들기 Y
 ESLINT 만들기 Y
 TAILWIND 만들기 Y
 
+
 code carrot-market-next14
 ======================================================================
+package파일 재설치
+'npm install
+
+
+======================================================================
+
 3.확장 프로그램 설치
 
 3-1.Tailwind CSS IntelliSense
@@ -291,11 +298,15 @@ Redirect URI: http://localhost:3000/api/auth/callback/kakao
 REST API키 가 KAKAO_CLIENT_ID 
 제품설정 > 보안 메뉴에 가면 카카오로그인 ON을 할 수 있는데, 거기에 나오는 코드가 KAKAO_CLIENT_SECRET
 
+======================================================================
+
 10.
 NextJS의 Image는 이미지를 자동으로 최적화를 해 주어 성능을 향상시키고 빠른 로딩이 되도록 해 준다.
 하지만 외부 호스트의 이미지(다른 사이트의 이미지 링크 등)를 불러올 때는 보안 상의 이유로 이 기능이 허용되지 않는다.
 따라서 next.config.mjs에서 hostname들을 등록해 주어야 한다.
 (nextConfig > images > remotePatterns > hostname)
+
+======================================================================
 
 11. 이미지 업로드
 #Cloudflare Image Optimization
@@ -311,6 +322,8 @@ https://react-hook-form.com
 'npm install react-hook-form
 'npm i @hookform/resolvers
 
+======================================================================
+
 12. MODALS
 
 12.1 Interceptiong
@@ -320,3 +333,36 @@ https://react-hook-form.com
 
  # Parallel Routes
 https://nextjs.org/docs/app/building-your-application/routing/parallel-routes
+
+======================================================================
+
+13.CACHING
+# unstable_cache
+'npm i iron-session
+
+https://nextjs.org/docs/app/api-reference/functions/unstable_cache
+
+import { unstable_cache as nextCache } from "next/cache";
+
+const getCachedProducts = nextCache(getInitialProducts, ["home-products"], {
+  revalidate: 60,       //갱신
+});
+
+revalidate: 60,  => 60초가 지나면 캐시 사용 안하고 호출
+revalidatePath("/home");  =>home화면 cache 끄기
+revalidateTag  => Tag 설정된 영역 cache 끄기 
+
+# fetch 캐시 설정하기
+# Route Segment Config
+https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
+
+static을 dynamic 형태로 변경해줄수 있음
+
+export const dynamic = "force-dynamic";
+export const revalidate = 60;
+
+# generateStaticParams
+https://nextjs.org/docs/app/api-reference/functions/generate-static-params
+
+14.OPTIMISTIC
+mutation시 응답기다리지 않고 미리 적용
